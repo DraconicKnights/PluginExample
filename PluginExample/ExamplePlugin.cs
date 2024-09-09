@@ -8,7 +8,8 @@ namespace PluginExample;
 public class ExamplePlugin : IPlugin
 {
     public string Name => "Example Plugin";
-    public string Description => "";
+    public string Description => "This is an example plugin";
+    public string Author => "Dragon";
     public string Version => "1.0";
 
     public void OnEnable()

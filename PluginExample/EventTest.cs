@@ -1,3 +1,4 @@
+using Manager;
 using Utils.Attributes;
 using Utils.Enums;
 using Utils.EventCore.Events;
@@ -29,6 +30,9 @@ public class EventTest
     [ServerEvent(ServerEventType.PlayerBan)]
     public void OnPlayerBanned(PlayerBanEvent playerBanEvent)
     {
-        playerBanEvent.Actor.Kick(playerBanEvent.Actor.ID, "Example");
+        GameManager.Singleton.GameTimer.SetTimer(10, () =>
+        {
+            Logger.Instance.LogInfo($"Player: {playerBanEvent.Target.Name} has been banned by {playerBanEvent.Actor.Name}");
+        });
     }
 }
