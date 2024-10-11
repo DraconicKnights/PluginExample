@@ -1,7 +1,7 @@
 <p align="center"><img src="example.png" width="400" alt="Laravel Logo"></a></p>
 
 ## Unity Project Community Plugin Repo
-Example Plugin
+# Title: Example Plugin
 
 An example of how plugins can be designed and set for my custom unity project
 
