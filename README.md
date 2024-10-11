@@ -50,6 +50,7 @@ public class ExamplePlugin : IPlugin
 ```
 
 ## Information
+
 - The plugin is retrieved from the server's plugin directory and then activated
 - Upon activation OnEnable is invoked and triggered thus beginning the plugin instantiation
 - All Developer content info is passed to the server to be logged for making ease of tracking server plugins
@@ -93,6 +94,11 @@ public class EventTest
 }
 ```
 
+## Informaiton
+
+- All functions marked with the ServerEvent Attribute if registered as an event handler will be invoked
+- A provided event delegate will be invoked as parameter alongside it's invocation for use within the plugin to grab info related to the event 
+
 ## Example Custom Command
 ```csharp
 // Example custom command addition
@@ -113,3 +119,9 @@ public class TestCommand : ICommand
     }
 }
 ```
+
+## Information
+
+- All commands must be marked with the Command Attribute in order to work correctly
+- All commands must be marked with the ICommand interface for correct properties to be set
+- The command system will provide the executing player, string array of arguments and expect the return of valid response string during command completion 
